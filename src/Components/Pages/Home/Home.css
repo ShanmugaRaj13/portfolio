@@ -1,0 +1,229 @@
+@import '../../../index.css';
+
+
+.home{
+    color: white;
+    margin: 0 !important;
+    width: 100%;
+}
+
+.home-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-summary{
+    width: 40%;
+}
+
+.home-summary-header h6{
+    color: var(--text-color);
+}
+
+.home-summary-header h1:last-child{
+    color: var(--main-color);
+}
+
+.home-summary-para p{
+    color: var(--text-color) !important;
+}
+
+
+.home-summary-footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hsf-left a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight:bolder;
+    background-color:transparent;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    padding: 1.7rem 5.3rem !important;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.hsf-left a::before {
+    content: "Download CV";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  
+.hsf-left a:hover::before {
+    left: 100%;
+    transform: scale(0) rotateY(360deg);
+    opacity: 0;
+  }
+  
+.hsf-left a::after {
+    content: "Download CV";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform: scale(0) rotateY(0deg);
+    opacity: 0;
+  }
+  
+.hsf-left a:hover::after {
+    left: 0;
+    transform: scale(1) rotateY(360deg);
+    opacity: 1;
+  }
+  
+  
+
+.hsf-left a:hover{
+    box-shadow: 0 0 20px var(--main-color);
+}
+.hsf-right{
+    display: flex;
+    align-items: center;
+}
+.font-foot{
+    margin-right: 2rem !important;
+    font-size: 2rem;
+}
+
+.font-foot path{
+    color: white;
+    transition: .2s linear;
+}
+.hsf-right a:last-child .font-foot{
+    margin-right: 0 !important;
+}
+.font-foot:hover path{
+    color: var(--main-color);
+    animation: slide-in-top .5s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+.hsf-left{
+    margin-right: 2rem !important;
+}
+
+
+.home-img{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.home-img img{
+    box-shadow: 0 3px 10px  var(--main-color);
+    width: 70%;
+}
+
+.home-img::after,.home-img::before{
+    width:5rem;
+    height: 5rem;
+    content: "";
+    border: .5rem solid var(--main-color);
+    z-index: 99;
+    position: absolute;
+}
+.home-img::before{
+    top: 1rem;
+    left: 3rem;
+    border-right: none;
+    border-bottom: none;
+}
+.home-img::after{
+    bottom: 1rem;
+    right: 3rem;
+    border-left: none;
+    border-top: none;
+}
+
+
+@media (max-width:1005px) {
+    .hsf-left a{
+        font-size: 1.3rem;
+        padding: 2rem 5.3rem !important;
+    }
+}
+
+@media (max-width:768px) {
+    .home-summary,.home-img{
+        width: 80%;
+    }
+    .home-img img{
+        width: 50%;
+    }
+    .home-child{
+        flex-wrap: wrap;
+    }
+    .home-img::after,.home-img::before{
+        width: 3rem;
+        height: 3rem;
+        border: .3rem solid var(--main-color);
+    }
+    .home-img::after{
+        border-left: none;
+        border-top: none;
+    }
+    .home-img::before{
+        border-right: none;
+        border-bottom: none;
+    }
+    .font-foot{
+        font-size: 1.3rem;
+        margin-right: 1rem !important;
+    }
+    .hsf-left a{
+        padding: 1.5rem 5rem !important;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:576px) {
+    .hsf-left a{
+        font-size: .9rem !important;
+        padding: 1.3rem 4rem !important;
+    }
+    .hsf-left{
+        margin-right: 1rem !important;
+    }
+}
+
+@media (max-width:400px) {
+    .hsf-left a{
+        font-size: .8rem !important;
+        padding: 1.1rem 3.3rem !important;
+    }
+}
+

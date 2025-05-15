@@ -1,0 +1,145 @@
+@import '../../../index.css';
+
+.contact-child{
+    width: 80%;
+    color: var(--main-color);
+}
+
+.contact-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-left,.contact-right{
+    width: 40%;
+}
+.contact-left{
+    margin-right: 4rem !important;
+}
+
+.inputgroup{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputgroup label{
+    margin-bottom: .5rem !important;
+}
+
+.inputgroup input{
+    color: #ffffff !important;
+    height: 2rem !important;
+    padding: .5rem !important;
+    background-color:  transparent !important;
+    border-radius: 5px !important;
+}
+
+.custom-placeholder::placeholder {
+    color: #ffffff !important; 
+  }
+
+.inputgroup textarea{
+    color: #ffffff !important;
+    /* height: 2rem !important; */
+    padding: .5rem !important;
+    background-color:  transparent !important;
+}
+
+form button{
+    margin-top: .4rem !important;
+    border: 1px solid var(--main-color);
+    padding: .3rem 1rem !important;
+    border-radius: 5px !important;
+}
+
+form button:hover{
+    box-shadow: 0 0 20px var(--main-color);
+    background-color: var(--main-color);
+    color: var(--primary-color);
+}
+
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.number p,.location p{
+    color: #ffffff !important;
+}
+
+.contact-icons{
+    color: #ffffff;
+    font-size: 1.8rem !important;
+    padding: 1rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contact-icons a{
+    text-decoration: none;
+    color: #ffffff !important;
+}
+
+.contact-icons svg:hover path{
+    animation: slide-in-top 0.3s both;
+}
+
+/* linkedin */
+.insta:hover svg {
+    color: #d62976;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .linkedin:hover svg {
+    color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .whatsapp:hover svg {
+    color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+
+@keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+
+@media (max-width:768px) {
+    .contact-left{
+        width: 50%;
+        margin-right: 1rem !important;
+    }
+    .contact-right{
+        width: 50%;
+    }
+}
+@media (max-width:576px) {
+    .contact-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-left{
+        margin-right: 0 !important;
+    }
+    .contact-right,.contact-left{
+        width: 80%;
+    }
+    .contact-right .contact-details{
+        display: flex;
+        justify-content: center;
+    }
+
+}

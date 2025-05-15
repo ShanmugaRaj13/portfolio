@@ -1,0 +1,53 @@
+@import '../../../index.css';
+
+.certification{
+    color: var(--text-color);
+}
+b{
+    color: white !important;
+    font-weight:bold;
+}
+
+.study-main div{
+    position: relative;
+    height: 100%;
+}
+
+.study-main div span:first-child{
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: -20px;
+    z-index: 999;
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.study-main div span:last-child{
+    width: 2px;
+    height:calc(100% + 1rem);
+    background-color: var(--main-color);
+    opacity: .6;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: -16px;
+    z-index: 999;
+}
+.study-main div:last-child span:last-child{
+    height: 0;
+}
+
+
+@media (max-width:768px) {
+    .study-main div span:first-child{
+        top: 5px;
+    }
+}
+/* @media (max-width:576px) {
+    .study-main div span:last-child{
+        height: calc(100% + .5rem);
+    } 
+}*/

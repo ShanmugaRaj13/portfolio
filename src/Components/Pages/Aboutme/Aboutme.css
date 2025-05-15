@@ -1,0 +1,95 @@
+@import '../../../index.css';
+
+.aboutme-child {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.aboutme-summary p {
+  color: var(--text-color) !important;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.aboutme-footer-section1 {
+  color: #ffffff;
+  opacity: 0.7;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.aboutme-footer-section2 {
+  color: var(--text-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+
+.aboutme-footer-section2 > div {
+  width: 40%;
+  min-height: 7rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.13));
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 1.2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.aboutme-footer-section2 > div:hover {
+  box-shadow: 0 0 15px var(--main-color);
+}
+
+.aboutme-footer-section2 div h4 {
+  color: var(--main-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.aboutme-footer-section2 div p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .aboutme-footer-section2 > div {
+    width: 48%;
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutme-footer-section2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutme-footer-section2 > div {
+    width: 90%;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .aboutme-footer-section2 div h4 {
+    font-size: 1.1rem;
+  }
+
+  .aboutme-footer-section2 div p {
+    font-size: 0.9rem;
+  }
+}

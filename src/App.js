@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Dash from './Components/DashBoard';
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';  // Import Bootstrap styles
+import 'antd/dist/reset.css';  // Import Ant Design styles
+import 'aos/dist/aos.css';  // Import AOS styles
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Dash />
     </div>
   );
 }

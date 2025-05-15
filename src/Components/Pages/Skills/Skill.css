@@ -1,0 +1,155 @@
+@import '../../../index.css';
+
+.skill-child {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ss-common {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ss-common h3 {
+  color: #ffffff;
+  opacity: 0.7;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+/* Container for the skill icons */
+.fontsame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  transition: all 0.5s ease;
+}
+
+/* Individual skill card */
+.fontsame div {
+  position: relative;
+  width: 17%;
+  height: 180px;
+  background: linear-gradient(rgba(255, 255, 255, 0.13), transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 1deg));
+  margin: 0 -45px !important;
+  transition: transform 0.5s ease, margin 0.5s ease;
+  cursor: default;
+}
+
+/* Hover effect: straighten cards and space evenly */
+.fontsame:hover div {
+  transform: rotate(0deg);
+  margin: 0 10px !important;
+}
+
+/* Label below icon */
+.fontsame div::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  user-select: none;
+}
+
+/* Skill icon styling */
+.fontsame div svg {
+  font-size: 5rem;
+  color: var(--main-color);
+  fill: var(--main-color);
+  transform: translateY(-1rem);
+  pointer-events: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1100px) {
+  .fontsame div {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .fontsame {
+    gap: 1.5rem;
+  }
+  .fontsame div {
+    width: 27%;
+    height: 160px;
+    margin: 0 -30px !important;
+  }
+  .fontsame:hover div {
+    margin: 0 8px !important;
+  }
+  .fontsame div::before {
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  .fontsame div svg {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .fontsame {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .fontsame div {
+    width: 45%;
+    height: 130px;
+    margin: 0 !important;
+    transform: rotate(0deg) !important; /* Disable rotation on small screens */
+  }
+  .fontsame:hover div {
+    margin: 0 !important;
+  }
+  .fontsame div::before {
+    height: 30px;
+    font-size: 0.85rem;
+  }
+  .fontsame div svg {
+    font-size: 3rem !important;
+    transform: translateY(-0.5rem);
+  }
+}
+
+@media (max-width: 400px) {
+  .fontsame div {
+    width: 90%;
+    height: 100px;
+  }
+  .fontsame div svg {
+    font-size: 2.5rem !important;
+  }
+  .fontsame div::before {
+    height: 28px;
+    font-size: 0.8rem;
+  }
+}

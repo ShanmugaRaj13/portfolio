@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +6,148 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,*::before,*::after{
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing:border-box;
+  transition: .3s ease;
 }
+
+@media (max-width:768px) {
+  h1{
+    font-size: 1.5rem !important ;
+  }
+  h2{
+    font-size: 1.2rem !important ;
+  }
+  h3{
+    font-size: .9rem !important ;
+  }
+  h4{
+    font-size: .8rem !important ;
+  }
+  p{
+    font-size: small !important;
+  }
+}
+
+:root{
+  --primary-color:hsl(240, 2%, 2%);
+  --secondary-color:hsl(240, 2%, 11%);
+  --tertary-color:hsl(240, 2%, 20%);
+  --main-color:hsl(45, 100%, 72%);
+  --text-color:rgb(181, 178, 178);
+}
+
+body{
+  background-color: var(--primary-color) !important;
+  overflow: hidden;
+}
+
+#root{
+  height: 100%;
+}
+
+.App{
+  height: calc(100% - 56px);
+}
+.Dash{
+  height: 100%;
+}
+.main{
+  height: 100%;
+}
+
+.main-section{
+  height: 100%;
+  overflow: auto;
+}
+
+.overall-section{
+  min-height: 100%;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 1rem; /* Width of the scrollbar */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background:transparent ; /* Background of the scrollbar track */
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--tertary-color) ; /* Color of the scrollbar thumb */
+  border-radius: 10px;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.child{
+  width: 80% !important;
+}
+
+.component-header{
+  width: fit-content;
+  position: relative;
+  margin-bottom: 2rem !important ;
+  color: var(--main-color);
+}
+.component-header span{
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: var(--main-color);
+  border-radius: 0;
+  position: absolute;
+  bottom: -15px;
+  z-index: 1;
+  animation: boxshadow 2s linear infinite;
+}
+
+@keyframes boxshadow {
+  0%{
+    box-shadow: 0 0 0px var(--main-color);
+  }
+  50%{
+    box-shadow: 0 0 20px var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+  }
+  100%{
+    box-shadow: 0 0 0px var(--main-color);
+  }
+}
+
+/* BUZZ OUT */
+.buzz-out:hover {
+  animation: buzzOut 0.5s ease-out infinite;
+}
+@keyframes buzzOut {
+  10% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(3px) rotate(2deg);
+  }
+}
+
+
+
+
