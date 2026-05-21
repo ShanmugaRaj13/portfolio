@@ -1,8 +1,3 @@
-# ⚡ Alex Chen — Frontend Developer Portfolio
-
-A **premium, award-winning-style** personal portfolio built with React.js, React Router, Framer Motion, and Bootstrap. Designed around a "Neon Noir" aesthetic — deep blacks, electric cyan/teal accents, glassmorphism panels, and cinematic scroll animations.
-
----
 
 ## 🗂 Project Structure
 
